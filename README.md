@@ -21,7 +21,7 @@ git branch
 # 创建新的分支
 git checkout -b <ios>
 # 编译出xcodeproject
-gn gen out/xcode --args='target_os="ios" ios_enable_code_signing=false is_component_build=false' --ide=xcode
+gn gen out/xcode --args='target_os="ios" target_cpu="x64" rtc_include_tests=false ios_enable_code_signing=false' --ide=xcode
 # 使用xcode打开all.xcodeproj,targets选择'framework_objc_signed_bundle'进行编译运行。如果成功在`out/xcode`目录会得到WebRTC.framework动态库
 
 ```
